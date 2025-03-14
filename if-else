@@ -1,0 +1,27 @@
+package com.myregister.ifelse;
+
+import java.util.Scanner;//导入Scanner类
+
+//用户身份验证
+public class Register {
+    public static void main(String[] args) {
+        //类还不会，先用基础语法if-else解决
+        //System.out.println("请选择登录(1)或注册(0)");
+        //数据库也不会，先用硬编码顶替
+        String username = "admin";
+        String password="1";
+        Scanner scanner = new Scanner(System.in);
+        while(true){
+            System.out.println("请输入用户名：");
+            String inputUsername = scanner.nextLine();
+            System.out.println("请输入密码：");
+            String inputPassword = scanner.nextLine();
+            if(inputUsername.equals(username) && inputPassword.equals(password)){
+                System.out.println("登录成功！欢迎您~");
+                break;
+            }else{
+                System.out.println("用户名或密码错误，请重新输入！");
+            }
+        }
+    }
+}
